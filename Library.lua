@@ -863,7 +863,7 @@ TextSize = 13;
 Visible = false;
 ZIndex = 110;
 Parent = Library.KeybindContainer;
-}, true);
+},  true);
 local Modes = Info.Modes or { 'Always', 'Toggle', 'Hold' };
 local ModeButtons = {};
 for Idx, Mode in next, Modes do
@@ -2799,6 +2799,7 @@ Toggled = (not Toggled);
 ModalElement.Modal = Toggled;
 if Toggled then
 Outer.Visible = true;
+[PATCHED] removed custom cursor that hides system cursor
 end;
 for _, Desc in next, Outer:GetDescendants() do
 local Properties = {};

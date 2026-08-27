@@ -167,7 +167,7 @@ end
 function SaveManager:BuildConfigSection(tab)
 assert(self.Library, 'Must set SaveManager.Library')
 local section = tab:AddRightGroupbox('Configuration')
-section:AddInput('SaveManager_ConfigName', { Text = 'Config name' })
+section:AddInput('SaveManager_ConfigName',    { Text = 'Config name' })
 section:AddDropdown('SaveManager_ConfigList', { Text = 'Config list', Values = self:RefreshConfigList(), AllowNull = true })
 section:AddDivider()
 section:AddButton('Create config', function()
@@ -217,4 +217,4 @@ SaveManager:SetIgnoreIndexes({ 'SaveManager_ConfigList', 'SaveManager_ConfigName
 end
 SaveManager:BuildFolderTree()
 end
-return SaveManager
+return SaveManager
